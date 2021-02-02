@@ -5,7 +5,10 @@ view: sales {
 
   dimension: brand {}
 
-  dimension: sales_amount {}
+  dimension: sales_amount {
+    type: number
+    sql: ${TABLE}.sales_amt ;;
+  }
 
   measure: total_sales_amount {
     type: sum
